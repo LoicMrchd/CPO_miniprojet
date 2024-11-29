@@ -5,6 +5,7 @@
 package mastermind;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 
@@ -17,41 +18,30 @@ public class MasterMind {
     /**
      * @param args the command line arguments
      */
-        public static void main(String[] args) {
-        // Définir les couleurs disponibles pour les combinaisons
-        ArrayList<Character> couleursDisponibles = new ArrayList<>();
+        
+    public static void main(String[] args) {
+        // Étape 1 : Définir les paramètres du jeu
+        int tailleCombinaison = 4;
+        int nbToursMax = 10;
+        List<Character> couleursDisponibles = new ArrayList<>();
         couleursDisponibles.add('R'); // Rouge
         couleursDisponibles.add('B'); // Bleu
         couleursDisponibles.add('G'); // Vert
         couleursDisponibles.add('Y'); // Jaune
+        couleursDisponibles.add('O'); // Orange
+        couleursDisponibles.add('P'); // Violet
 
-        // Création d'une combinaison secrète
-        Combinaison combinaisonSecrete = new Combinaison(new Pion[]{
-            new Pion('R'), new Pion('B'), new Pion('G'), new Pion('Y')
-        });
-        System.out.println("Combinaison Secrete : " + combinaisonSecrete);
+        // Étape 2 : Initialiser la partie
+        Partie partie = new Partie(tailleCombinaison, nbToursMax, couleursDisponibles);
 
-        // Initialisation du plateau de jeu avec 10 tours max
-        PlateauDeJeu plateau = new PlateauDeJeu(combinaisonSecrete, 10);
+        // Étape 3 : Afficher les règles une seule fois
+        partie.afficherRegles();
 
-        // Ajout de tentatives
-        Combinaison tentative1 = new Combinaison(new Pion[]{
-            new Pion('R'), new Pion('G'), new Pion('B'), new Pion('Y')
-        });
-        plateau.proposerCombinaison(tentative1);
-        plateau.afficherPlateau();
-
-        Combinaison tentative2 = new Combinaison(new Pion[]{
-            new Pion('R'), new Pion('B'), new Pion('G'), new Pion('Y')
-        });
-        plateau.proposerCombinaison(tentative2);
-        plateau.afficherPlateau();
-
-        // Vérification des conditions de victoire et de défaite
-        System.out.println("Victoire ? " + plateau.estVictoire()); // Doit afficher true après tentative2
-        System.out.println("Defaite ? " + plateau.estDefaite());   // Doit afficher false (partie pas encore perdue)
+        // Étape 4 : Lancer la partie
+        partie.lancerPartie();
     }
 }
+
         
     
         

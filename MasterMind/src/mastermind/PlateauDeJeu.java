@@ -15,7 +15,11 @@ public class PlateauDeJeu {
     private Combinaison combinaisonSecrete;
     private ArrayList<Combinaison> tentatives;
     private ArrayList<String> reponses;
-    private int nbToursMax;
+    int nbToursMax;
+    
+    public Combinaison getCombinaisonSecrete() {
+    return combinaisonSecrete;
+}
 
     /**
      * Constructeur pour initialiser le plateau de jeu.
