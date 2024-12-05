@@ -95,7 +95,7 @@ public class Partie {
             System.out.println("Felicitations ! Vous avez trouve la combinaison secrete !");
         } else {
             System.out.println("Vous avez depasse le nombre de tours maximum.");
-            System.out.println("La combinaison secrete était : " + plateau.getCombinaisonSecrete());
+            System.out.println("La combinaison secrete etait : " + plateau.getCombinaisonSecrete());
         }
     }
 
