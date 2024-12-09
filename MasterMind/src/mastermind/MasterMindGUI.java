@@ -77,6 +77,18 @@ public class MasterMindGUI extends javax.swing.JFrame {
         jButton38 = new javax.swing.JButton();
         jButton39 = new javax.swing.JButton();
         jButton40 = new javax.swing.JButton();
+        jButton41 = new javax.swing.JButton();
+        jPanel12 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -248,10 +260,58 @@ public class MasterMindGUI extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, new java.awt.GridBagConstraints());
 
+        jButton41.setText("Valider");
+        jButton41.setToolTipText("Cliquez pour valider votre tentative");
+        jButton41.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton41ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton41, new java.awt.GridBagConstraints());
+
+        jPanel12.setPreferredSize(new java.awt.Dimension(150, 130));
+        jPanel12.setLayout(new java.awt.GridLayout(10, 1));
+
+        jLabel1.setText("jLabel1");
+        jPanel12.add(jLabel1);
+
+        jLabel2.setText("jLabel2");
+        jPanel12.add(jLabel2);
+
+        jLabel3.setText("jLabel3");
+        jPanel12.add(jLabel3);
+
+        jLabel5.setText("jLabel5");
+        jPanel12.add(jLabel5);
+
+        jLabel4.setText("jLabel4");
+        jPanel12.add(jLabel4);
+
+        jLabel6.setText("jLabel6");
+        jPanel12.add(jLabel6);
+
+        jLabel7.setText("jLabel7");
+        jPanel12.add(jLabel7);
+
+        jLabel9.setText("jLabel9");
+        jPanel12.add(jLabel9);
+
+        jLabel8.setText("jLabel8");
+        jPanel12.add(jLabel8);
+
+        jLabel10.setText("jLabel10");
+        jPanel12.add(jLabel10);
+
+        getContentPane().add(jPanel12, new java.awt.GridBagConstraints());
+
         getAccessibleContext().setAccessibleName("MasterMind");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton41ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton41ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -324,14 +384,26 @@ public class MasterMindGUI extends javax.swing.JFrame {
     private javax.swing.JButton jButton39;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton40;
+    private javax.swing.JButton jButton41;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
