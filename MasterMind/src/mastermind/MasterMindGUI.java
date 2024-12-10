@@ -5,7 +5,13 @@
 package mastermind;
 
 import java.awt.Color;
+import java.awt.Component;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 /**
  *
@@ -14,6 +20,9 @@ import javax.swing.JButton;
 public class MasterMindGUI extends javax.swing.JFrame {
     
     private JButton boutonActif;
+    private int tentativeActuelle = 0;
+    private List<List<JButton>> tableauBoutons = new ArrayList<>();
+    private PlateauDeJeu plateau;
     
     
 
@@ -22,6 +31,12 @@ public class MasterMindGUI extends javax.swing.JFrame {
      */
     public MasterMindGUI() {
         initComponents();
+        // Initialisation de 'plateau'
+        ArrayList<Character> couleursDisponibles = new ArrayList<>(List.of('R', 'B', 'G', 'Y', 'O', 'P'));
+        Combinaison combinaisonSecrete = Combinaison.genererAleatoire(4, couleursDisponibles);
+        plateau = new PlateauDeJeu(combinaisonSecrete, 10);
+
+        System.out.println("Plateau initialisé : " + (plateau != null));
     }
 
     /**
@@ -207,15 +222,35 @@ public class MasterMindGUI extends javax.swing.JFrame {
         jPanel3.setLayout(new java.awt.GridLayout(1, 4));
 
         jButton5.setText("jButton5");
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton5MousePressed(evt);
+            }
+        });
         jPanel3.add(jButton5);
 
         jButton6.setText("jButton6");
+        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton6MousePressed(evt);
+            }
+        });
         jPanel3.add(jButton6);
 
         jButton7.setText("jButton7");
+        jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton7MousePressed(evt);
+            }
+        });
         jPanel3.add(jButton7);
 
         jButton8.setText("jButton8");
+        jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton8MousePressed(evt);
+            }
+        });
         jPanel3.add(jButton8);
 
         jPanel1.add(jPanel3);
@@ -223,15 +258,35 @@ public class MasterMindGUI extends javax.swing.JFrame {
         jPanel4.setLayout(new java.awt.GridLayout(1, 4));
 
         jButton9.setText("jButton9");
+        jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton9MousePressed(evt);
+            }
+        });
         jPanel4.add(jButton9);
 
         jButton10.setText("jButton10");
+        jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton10MousePressed(evt);
+            }
+        });
         jPanel4.add(jButton10);
 
         jButton11.setText("jButton11");
+        jButton11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton11MousePressed(evt);
+            }
+        });
         jPanel4.add(jButton11);
 
         jButton12.setText("jButton12");
+        jButton12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton12MousePressed(evt);
+            }
+        });
         jPanel4.add(jButton12);
 
         jPanel1.add(jPanel4);
@@ -239,15 +294,35 @@ public class MasterMindGUI extends javax.swing.JFrame {
         jPanel5.setLayout(new java.awt.GridLayout(1, 4));
 
         jButton13.setText("jButton13");
+        jButton13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton13MousePressed(evt);
+            }
+        });
         jPanel5.add(jButton13);
 
         jButton14.setText("jButton14");
+        jButton14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton14MousePressed(evt);
+            }
+        });
         jPanel5.add(jButton14);
 
         jButton15.setText("jButton15");
+        jButton15.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton15MousePressed(evt);
+            }
+        });
         jPanel5.add(jButton15);
 
         jButton16.setText("jButton16");
+        jButton16.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton16MousePressed(evt);
+            }
+        });
         jPanel5.add(jButton16);
 
         jPanel1.add(jPanel5);
@@ -255,15 +330,35 @@ public class MasterMindGUI extends javax.swing.JFrame {
         jPanel6.setLayout(new java.awt.GridLayout(1, 4));
 
         jButton17.setText("jButton17");
+        jButton17.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton17MousePressed(evt);
+            }
+        });
         jPanel6.add(jButton17);
 
         jButton18.setText("jButton18");
+        jButton18.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton18MousePressed(evt);
+            }
+        });
         jPanel6.add(jButton18);
 
         jButton19.setText("jButton19");
+        jButton19.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton19MousePressed(evt);
+            }
+        });
         jPanel6.add(jButton19);
 
         jButton20.setText("jButton20");
+        jButton20.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton20MousePressed(evt);
+            }
+        });
         jPanel6.add(jButton20);
 
         jPanel1.add(jPanel6);
@@ -271,15 +366,35 @@ public class MasterMindGUI extends javax.swing.JFrame {
         jPanel7.setLayout(new java.awt.GridLayout(1, 4));
 
         jButton21.setText("jButton21");
+        jButton21.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton21MousePressed(evt);
+            }
+        });
         jPanel7.add(jButton21);
 
         jButton22.setText("jButton22");
+        jButton22.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton22MousePressed(evt);
+            }
+        });
         jPanel7.add(jButton22);
 
         jButton23.setText("jButton23");
+        jButton23.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton23MousePressed(evt);
+            }
+        });
         jPanel7.add(jButton23);
 
         jButton24.setText("jButton24");
+        jButton24.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton24MousePressed(evt);
+            }
+        });
         jPanel7.add(jButton24);
 
         jPanel1.add(jPanel7);
@@ -287,15 +402,35 @@ public class MasterMindGUI extends javax.swing.JFrame {
         jPanel8.setLayout(new java.awt.GridLayout(1, 4));
 
         jButton25.setText("jButton25");
+        jButton25.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton25MousePressed(evt);
+            }
+        });
         jPanel8.add(jButton25);
 
         jButton26.setText("jButton26");
+        jButton26.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton26MousePressed(evt);
+            }
+        });
         jPanel8.add(jButton26);
 
         jButton27.setText("jButton27");
+        jButton27.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton27MousePressed(evt);
+            }
+        });
         jPanel8.add(jButton27);
 
         jButton28.setText("jButton28");
+        jButton28.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton28MousePressed(evt);
+            }
+        });
         jPanel8.add(jButton28);
 
         jPanel1.add(jPanel8);
@@ -303,15 +438,35 @@ public class MasterMindGUI extends javax.swing.JFrame {
         jPanel9.setLayout(new java.awt.GridLayout(1, 4));
 
         jButton29.setText("jButton29");
+        jButton29.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton29MousePressed(evt);
+            }
+        });
         jPanel9.add(jButton29);
 
         jButton30.setText("jButton30");
+        jButton30.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton30MousePressed(evt);
+            }
+        });
         jPanel9.add(jButton30);
 
         jButton31.setText("jButton31");
+        jButton31.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton31MousePressed(evt);
+            }
+        });
         jPanel9.add(jButton31);
 
         jButton32.setText("jButton32");
+        jButton32.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton32MousePressed(evt);
+            }
+        });
         jPanel9.add(jButton32);
 
         jPanel1.add(jPanel9);
@@ -319,15 +474,35 @@ public class MasterMindGUI extends javax.swing.JFrame {
         jPanel10.setLayout(new java.awt.GridLayout(1, 4));
 
         jButton33.setText("jButton33");
+        jButton33.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton33MousePressed(evt);
+            }
+        });
         jPanel10.add(jButton33);
 
         jButton34.setText("jButton34");
+        jButton34.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton34MousePressed(evt);
+            }
+        });
         jPanel10.add(jButton34);
 
         jButton35.setText("jButton35");
+        jButton35.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton35MousePressed(evt);
+            }
+        });
         jPanel10.add(jButton35);
 
         jButton36.setText("jButton36");
+        jButton36.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton36MousePressed(evt);
+            }
+        });
         jPanel10.add(jButton36);
 
         jPanel1.add(jPanel10);
@@ -335,15 +510,35 @@ public class MasterMindGUI extends javax.swing.JFrame {
         jPanel11.setLayout(new java.awt.GridLayout(1, 4));
 
         jButton37.setText("jButton37");
+        jButton37.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton37MousePressed(evt);
+            }
+        });
         jPanel11.add(jButton37);
 
         jButton38.setText("jButton38");
+        jButton38.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton38MousePressed(evt);
+            }
+        });
         jPanel11.add(jButton38);
 
         jButton39.setText("jButton39");
+        jButton39.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton39MousePressed(evt);
+            }
+        });
         jPanel11.add(jButton39);
 
         jButton40.setText("jButton40");
+        jButton40.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton40MousePressed(evt);
+            }
+        });
         jPanel11.add(jButton40);
 
         jPanel1.add(jPanel11);
@@ -387,6 +582,11 @@ public class MasterMindGUI extends javax.swing.JFrame {
 
         jButton41.setText("Valider");
         jButton41.setToolTipText("Cliquez pour valider votre tentative");
+        jButton41.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton41ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton41, new java.awt.GridBagConstraints());
 
         getAccessibleContext().setAccessibleName("MasterMind");
@@ -394,6 +594,24 @@ public class MasterMindGUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private List<Character> obtenirCouleursLigne(JPanel panel) {
+    List<Character> couleurs = new ArrayList<>();
+    for (Component comp : panel.getComponents()) {
+        if (comp instanceof JButton) {
+            JButton bouton = (JButton) comp;
+            String couleur = bouton.getText(); // Suppose que le texte du bouton correspond à une couleur.
+            if (couleur.isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Veuillez choisir une couleur pour chaque bouton !");
+                return null;
+            }
+            couleurs.add(couleur.charAt(0)); // Récupérer le premier caractère comme 'R', 'B', etc.
+        }
+    }
+    return couleurs;
+}
+    
+    
+    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -465,6 +683,270 @@ public class MasterMindGUI extends javax.swing.JFrame {
         boutonActif = (JButton) evt.getSource();
         jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
     }//GEN-LAST:event_jButton4MousePressed
+
+    private void jButton5MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MousePressed
+        // TODO add your handling code here:
+        boutonActif = (JButton) evt.getSource();
+        jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
+    }//GEN-LAST:event_jButton5MousePressed
+
+    private void jButton6MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MousePressed
+        // TODO add your handling code here:
+        boutonActif = (JButton) evt.getSource();
+        jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
+    }//GEN-LAST:event_jButton6MousePressed
+
+    private void jButton7MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MousePressed
+        // TODO add your handling code here:
+        boutonActif = (JButton) evt.getSource();
+        jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
+    }//GEN-LAST:event_jButton7MousePressed
+
+    private void jButton8MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MousePressed
+        // TODO add your handling code here:
+        boutonActif = (JButton) evt.getSource();
+        jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY()); 
+    }//GEN-LAST:event_jButton8MousePressed
+
+    private void jButton9MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MousePressed
+        // TODO add your handling code here:
+        boutonActif = (JButton) evt.getSource();
+        jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
+    }//GEN-LAST:event_jButton9MousePressed
+
+    private void jButton10MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton10MousePressed
+        // TODO add your handling code here:
+        boutonActif = (JButton) evt.getSource();
+        jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
+    }//GEN-LAST:event_jButton10MousePressed
+
+    private void jButton11MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MousePressed
+        // TODO add your handling code here:
+        boutonActif = (JButton) evt.getSource();
+        jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
+    }//GEN-LAST:event_jButton11MousePressed
+
+    private void jButton12MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton12MousePressed
+        // TODO add your handling code here:
+        boutonActif = (JButton) evt.getSource();
+        jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
+    }//GEN-LAST:event_jButton12MousePressed
+
+    private void jButton13MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton13MousePressed
+        // TODO add your handling code here:
+        boutonActif = (JButton) evt.getSource();
+        jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
+    }//GEN-LAST:event_jButton13MousePressed
+
+    private void jButton14MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton14MousePressed
+        // TODO add your handling code here:
+        boutonActif = (JButton) evt.getSource();
+        jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
+    }//GEN-LAST:event_jButton14MousePressed
+
+    private void jButton15MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton15MousePressed
+        // TODO add your handling code here:
+        boutonActif = (JButton) evt.getSource();
+        jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
+    }//GEN-LAST:event_jButton15MousePressed
+
+    private void jButton16MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton16MousePressed
+        // TODO add your handling code here:
+        boutonActif = (JButton) evt.getSource();
+        jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
+    }//GEN-LAST:event_jButton16MousePressed
+
+    private void jButton17MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton17MousePressed
+        // TODO add your handling code here:
+        boutonActif = (JButton) evt.getSource();
+        jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
+    }//GEN-LAST:event_jButton17MousePressed
+
+    private void jButton18MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton18MousePressed
+        // TODO add your handling code here:
+        boutonActif = (JButton) evt.getSource();
+        jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
+    }//GEN-LAST:event_jButton18MousePressed
+
+    private void jButton19MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton19MousePressed
+        // TODO add your handling code here:
+        boutonActif = (JButton) evt.getSource();
+        jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
+    }//GEN-LAST:event_jButton19MousePressed
+
+    private void jButton20MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton20MousePressed
+        // TODO add your handling code here:
+        boutonActif = (JButton) evt.getSource();
+        jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
+    }//GEN-LAST:event_jButton20MousePressed
+
+    private void jButton21MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton21MousePressed
+        // TODO add your handling code here:
+        boutonActif = (JButton) evt.getSource();
+        jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
+    }//GEN-LAST:event_jButton21MousePressed
+
+    private void jButton22MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton22MousePressed
+        // TODO add your handling code here:
+        boutonActif = (JButton) evt.getSource();
+        jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
+    }//GEN-LAST:event_jButton22MousePressed
+
+    private void jButton23MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton23MousePressed
+        // TODO add your handling code here:
+        boutonActif = (JButton) evt.getSource();
+        jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
+    }//GEN-LAST:event_jButton23MousePressed
+
+    private void jButton24MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton24MousePressed
+        // TODO add your handling code here:
+        boutonActif = (JButton) evt.getSource();
+        jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
+    }//GEN-LAST:event_jButton24MousePressed
+
+    private void jButton25MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton25MousePressed
+        // TODO add your handling code here:
+        boutonActif = (JButton) evt.getSource();
+        jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
+    }//GEN-LAST:event_jButton25MousePressed
+
+    private void jButton26MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton26MousePressed
+        // TODO add your handling code here:
+        boutonActif = (JButton) evt.getSource();
+        jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
+    }//GEN-LAST:event_jButton26MousePressed
+
+    private void jButton27MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton27MousePressed
+        // TODO add your handling code here:
+        boutonActif = (JButton) evt.getSource();
+        jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
+    }//GEN-LAST:event_jButton27MousePressed
+
+    private void jButton28MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton28MousePressed
+        // TODO add your handling code here:
+        boutonActif = (JButton) evt.getSource();
+        jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
+    }//GEN-LAST:event_jButton28MousePressed
+
+    private void jButton29MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton29MousePressed
+        // TODO add your handling code here:
+        boutonActif = (JButton) evt.getSource();
+        jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
+    }//GEN-LAST:event_jButton29MousePressed
+
+    private void jButton30MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton30MousePressed
+        // TODO add your handling code here:
+        boutonActif = (JButton) evt.getSource();
+        jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
+    }//GEN-LAST:event_jButton30MousePressed
+
+    private void jButton31MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton31MousePressed
+        // TODO add your handling code here:
+        boutonActif = (JButton) evt.getSource();
+        jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
+    }//GEN-LAST:event_jButton31MousePressed
+
+    private void jButton32MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton32MousePressed
+        // TODO add your handling code here:
+        boutonActif = (JButton) evt.getSource();
+        jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
+    }//GEN-LAST:event_jButton32MousePressed
+
+    private void jButton33MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton33MousePressed
+        // TODO add your handling code here:
+        boutonActif = (JButton) evt.getSource();
+        jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
+    }//GEN-LAST:event_jButton33MousePressed
+
+    private void jButton34MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton34MousePressed
+        // TODO add your handling code here:
+        boutonActif = (JButton) evt.getSource();
+        jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
+    }//GEN-LAST:event_jButton34MousePressed
+
+    private void jButton35MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton35MousePressed
+        // TODO add your handling code here:
+        boutonActif = (JButton) evt.getSource();
+        jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
+    }//GEN-LAST:event_jButton35MousePressed
+
+    private void jButton36MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton36MousePressed
+        // TODO add your handling code here:
+        boutonActif = (JButton) evt.getSource();
+        jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
+    }//GEN-LAST:event_jButton36MousePressed
+
+    private void jButton37MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton37MousePressed
+        // TODO add your handling code here:
+        boutonActif = (JButton) evt.getSource();
+        jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
+    }//GEN-LAST:event_jButton37MousePressed
+
+    private void jButton38MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton38MousePressed
+        // TODO add your handling code here:
+        boutonActif = (JButton) evt.getSource();
+        jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
+    }//GEN-LAST:event_jButton38MousePressed
+
+    private void jButton39MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton39MousePressed
+        // TODO add your handling code here:
+        boutonActif = (JButton) evt.getSource();
+        jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
+    }//GEN-LAST:event_jButton39MousePressed
+
+    private void jButton40MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton40MousePressed
+        // TODO add your handling code here:
+        boutonActif = (JButton) evt.getSource();
+        jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
+    }//GEN-LAST:event_jButton40MousePressed
+
+    private void jButton41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton41ActionPerformed
+        // TODO add your handling code here:
+        // Récupérer le panel actif
+    // Vérifier si le plateau est initialisé
+    if (plateau == null) {
+        // Si 'plateau' est null, l'initialiser ici
+        ArrayList<Character> couleursDisponibles = new ArrayList<>(List.of('R', 'B', 'G', 'Y', 'O', 'P'));
+        Combinaison combinaisonSecrete = Combinaison.genererAleatoire(4, couleursDisponibles);  // Générer une combinaison secrète aléatoire
+        plateau = new PlateauDeJeu(combinaisonSecrete, 10);  // Initialiser le plateau avec 10 tentatives disponibles
+    }
+
+    // Récupérer le panel actif
+    JPanel panelActif = (JPanel) jPanel1.getComponent(tentativeActuelle);
+
+    // Obtenir les couleurs sélectionnées dans le panel
+    List<Character> combinaisonJoueur = obtenirCouleursLigne(panelActif);
+    if (combinaisonJoueur == null) {
+        return; // Si la combinaison est incomplète, ne pas continuer.
+    }
+
+    // Convertir la combinaison en format Pion[]
+    Pion[] pionsTentative = new Pion[combinaisonJoueur.size()];
+    for (int i = 0; i < combinaisonJoueur.size(); i++) {
+        pionsTentative[i] = new Pion(combinaisonJoueur.get(i));  // Créer les pions à partir des couleurs
+    }
+    Combinaison tentative = new Combinaison(pionsTentative);
+
+    // Vérifier la tentative avec la combinaison secrète
+    int[] resultat = plateau.getCombinaisonSecrete().comparer(tentative);
+
+    // Afficher les indices dans le label correspondant
+    JLabel labelIndice = (JLabel) jPanel12.getComponent(tentativeActuelle);
+    labelIndice.setText(resultat[0] + " noirs, " + resultat[1] + " blancs");
+
+    // Vérifier si la partie est gagnée ou perdue
+    if (resultat[0] == 4) {
+        JOptionPane.showMessageDialog(this, "Félicitations ! Vous avez trouvé la combinaison secrète !");
+        return;
+    } else if (tentativeActuelle == 9) { // Dernière tentative (jPanel11)
+        JOptionPane.showMessageDialog(this, "Partie terminée. Vous avez utilisé toutes vos tentatives.");
+        return;
+    }
+
+    // Passer à la tentative suivante
+    tentativeActuelle++;
+        
+    }//GEN-LAST:event_jButton41ActionPerformed
 
     /**
      * @param args the command line arguments
