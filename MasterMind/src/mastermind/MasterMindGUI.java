@@ -168,7 +168,6 @@ public class MasterMindGUI extends javax.swing.JFrame {
         jPopupMenu1.add(jMenuItem6);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setResizable(false);
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Tableau des Tentatives"));
@@ -177,7 +176,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
 
         jPanel2.setLayout(new java.awt.GridLayout(1, 4));
 
-        jButton1.setText("jButton1");
+        jButton1.setText("¤");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton1MouseClicked(evt);
@@ -193,7 +192,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
         });
         jPanel2.add(jButton1);
 
-        jButton2.setText("jButton2");
+        jButton2.setText("¤");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton2MousePressed(evt);
@@ -201,7 +200,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
         });
         jPanel2.add(jButton2);
 
-        jButton3.setText("jButton3");
+        jButton3.setText("¤");
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton3MousePressed(evt);
@@ -209,7 +208,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
         });
         jPanel2.add(jButton3);
 
-        jButton4.setText("jButton4");
+        jButton4.setText("¤");
         jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton4MousePressed(evt);
@@ -221,7 +220,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
 
         jPanel3.setLayout(new java.awt.GridLayout(1, 4));
 
-        jButton5.setText("jButton5");
+        jButton5.setText("¤");
         jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton5MousePressed(evt);
@@ -229,7 +228,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
         });
         jPanel3.add(jButton5);
 
-        jButton6.setText("jButton6");
+        jButton6.setText("¤");
         jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton6MousePressed(evt);
@@ -237,7 +236,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
         });
         jPanel3.add(jButton6);
 
-        jButton7.setText("jButton7");
+        jButton7.setText("¤");
         jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton7MousePressed(evt);
@@ -245,7 +244,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
         });
         jPanel3.add(jButton7);
 
-        jButton8.setText("jButton8");
+        jButton8.setText("¤");
         jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton8MousePressed(evt);
@@ -257,7 +256,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
 
         jPanel4.setLayout(new java.awt.GridLayout(1, 4));
 
-        jButton9.setText("jButton9");
+        jButton9.setText("¤");
         jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton9MousePressed(evt);
@@ -265,7 +264,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
         });
         jPanel4.add(jButton9);
 
-        jButton10.setText("jButton10");
+        jButton10.setText("¤");
         jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton10MousePressed(evt);
@@ -273,7 +272,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
         });
         jPanel4.add(jButton10);
 
-        jButton11.setText("jButton11");
+        jButton11.setText("¤");
         jButton11.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton11MousePressed(evt);
@@ -281,7 +280,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
         });
         jPanel4.add(jButton11);
 
-        jButton12.setText("jButton12");
+        jButton12.setText("¤");
         jButton12.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton12MousePressed(evt);
@@ -293,7 +292,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
 
         jPanel5.setLayout(new java.awt.GridLayout(1, 4));
 
-        jButton13.setText("jButton13");
+        jButton13.setText("¤");
         jButton13.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton13MousePressed(evt);
@@ -301,7 +300,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
         });
         jPanel5.add(jButton13);
 
-        jButton14.setText("jButton14");
+        jButton14.setText("¤");
         jButton14.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton14MousePressed(evt);
@@ -309,7 +308,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
         });
         jPanel5.add(jButton14);
 
-        jButton15.setText("jButton15");
+        jButton15.setText("¤");
         jButton15.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton15MousePressed(evt);
@@ -317,7 +316,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
         });
         jPanel5.add(jButton15);
 
-        jButton16.setText("jButton16");
+        jButton16.setText("¤");
         jButton16.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton16MousePressed(evt);
@@ -329,7 +328,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
 
         jPanel6.setLayout(new java.awt.GridLayout(1, 4));
 
-        jButton17.setText("jButton17");
+        jButton17.setText("¤");
         jButton17.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton17MousePressed(evt);
@@ -337,7 +336,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
         });
         jPanel6.add(jButton17);
 
-        jButton18.setText("jButton18");
+        jButton18.setText("¤");
         jButton18.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton18MousePressed(evt);
@@ -345,7 +344,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
         });
         jPanel6.add(jButton18);
 
-        jButton19.setText("jButton19");
+        jButton19.setText("¤");
         jButton19.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton19MousePressed(evt);
@@ -353,7 +352,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
         });
         jPanel6.add(jButton19);
 
-        jButton20.setText("jButton20");
+        jButton20.setText("¤");
         jButton20.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton20MousePressed(evt);
@@ -365,7 +364,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
 
         jPanel7.setLayout(new java.awt.GridLayout(1, 4));
 
-        jButton21.setText("jButton21");
+        jButton21.setText("¤");
         jButton21.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton21MousePressed(evt);
@@ -373,7 +372,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
         });
         jPanel7.add(jButton21);
 
-        jButton22.setText("jButton22");
+        jButton22.setText("¤");
         jButton22.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton22MousePressed(evt);
@@ -381,7 +380,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
         });
         jPanel7.add(jButton22);
 
-        jButton23.setText("jButton23");
+        jButton23.setText("¤");
         jButton23.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton23MousePressed(evt);
@@ -389,7 +388,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
         });
         jPanel7.add(jButton23);
 
-        jButton24.setText("jButton24");
+        jButton24.setText("¤");
         jButton24.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton24MousePressed(evt);
@@ -401,7 +400,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
 
         jPanel8.setLayout(new java.awt.GridLayout(1, 4));
 
-        jButton25.setText("jButton25");
+        jButton25.setText("¤");
         jButton25.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton25MousePressed(evt);
@@ -409,7 +408,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
         });
         jPanel8.add(jButton25);
 
-        jButton26.setText("jButton26");
+        jButton26.setText("¤");
         jButton26.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton26MousePressed(evt);
@@ -417,7 +416,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
         });
         jPanel8.add(jButton26);
 
-        jButton27.setText("jButton27");
+        jButton27.setText("¤");
         jButton27.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton27MousePressed(evt);
@@ -425,7 +424,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
         });
         jPanel8.add(jButton27);
 
-        jButton28.setText("jButton28");
+        jButton28.setText("¤");
         jButton28.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton28MousePressed(evt);
@@ -437,7 +436,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
 
         jPanel9.setLayout(new java.awt.GridLayout(1, 4));
 
-        jButton29.setText("jButton29");
+        jButton29.setText("¤");
         jButton29.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton29MousePressed(evt);
@@ -445,7 +444,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
         });
         jPanel9.add(jButton29);
 
-        jButton30.setText("jButton30");
+        jButton30.setText("¤");
         jButton30.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton30MousePressed(evt);
@@ -453,7 +452,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
         });
         jPanel9.add(jButton30);
 
-        jButton31.setText("jButton31");
+        jButton31.setText("¤");
         jButton31.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton31MousePressed(evt);
@@ -461,7 +460,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
         });
         jPanel9.add(jButton31);
 
-        jButton32.setText("jButton32");
+        jButton32.setText("¤");
         jButton32.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton32MousePressed(evt);
@@ -473,7 +472,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
 
         jPanel10.setLayout(new java.awt.GridLayout(1, 4));
 
-        jButton33.setText("jButton33");
+        jButton33.setText("¤");
         jButton33.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton33MousePressed(evt);
@@ -481,7 +480,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
         });
         jPanel10.add(jButton33);
 
-        jButton34.setText("jButton34");
+        jButton34.setText("¤");
         jButton34.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton34MousePressed(evt);
@@ -489,7 +488,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
         });
         jPanel10.add(jButton34);
 
-        jButton35.setText("jButton35");
+        jButton35.setText("¤");
         jButton35.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton35MousePressed(evt);
@@ -497,7 +496,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
         });
         jPanel10.add(jButton35);
 
-        jButton36.setText("jButton36");
+        jButton36.setText("¤");
         jButton36.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton36MousePressed(evt);
@@ -509,7 +508,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
 
         jPanel11.setLayout(new java.awt.GridLayout(1, 4));
 
-        jButton37.setText("jButton37");
+        jButton37.setText("¤");
         jButton37.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton37MousePressed(evt);
@@ -517,7 +516,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
         });
         jPanel11.add(jButton37);
 
-        jButton38.setText("jButton38");
+        jButton38.setText("¤");
         jButton38.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton38MousePressed(evt);
@@ -525,7 +524,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
         });
         jPanel11.add(jButton38);
 
-        jButton39.setText("jButton39");
+        jButton39.setText("¤");
         jButton39.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton39MousePressed(evt);
@@ -533,7 +532,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
         });
         jPanel11.add(jButton39);
 
-        jButton40.setText("jButton40");
+        jButton40.setText("¤");
         jButton40.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton40MousePressed(evt);
@@ -545,37 +544,17 @@ public class MasterMindGUI extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, new java.awt.GridBagConstraints());
 
-        jPanel12.setPreferredSize(new java.awt.Dimension(150, 130));
+        jPanel12.setPreferredSize(new java.awt.Dimension(270, 260));
         jPanel12.setLayout(new java.awt.GridLayout(10, 1));
-
-        jLabel1.setText("jLabel1");
         jPanel12.add(jLabel1);
-
-        jLabel2.setText("jLabel2");
         jPanel12.add(jLabel2);
-
-        jLabel3.setText("jLabel3");
         jPanel12.add(jLabel3);
-
-        jLabel5.setText("jLabel5");
         jPanel12.add(jLabel5);
-
-        jLabel4.setText("jLabel4");
         jPanel12.add(jLabel4);
-
-        jLabel6.setText("jLabel6");
         jPanel12.add(jLabel6);
-
-        jLabel7.setText("jLabel7");
         jPanel12.add(jLabel7);
-
-        jLabel9.setText("jLabel9");
         jPanel12.add(jLabel9);
-
-        jLabel8.setText("jLabel8");
         jPanel12.add(jLabel8);
-
-        jLabel10.setText("jLabel10");
         jPanel12.add(jLabel10);
 
         getContentPane().add(jPanel12, new java.awt.GridBagConstraints());
