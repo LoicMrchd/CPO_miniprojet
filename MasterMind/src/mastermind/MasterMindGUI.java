@@ -25,6 +25,8 @@ public class MasterMindGUI extends javax.swing.JFrame {
     private PlateauDeJeu plateau;
     
     
+    
+    
 
     /**
      * Creates new form MasterMindGUI
@@ -993,8 +995,12 @@ public class MasterMindGUI extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+          
             public void run() {
-                new MasterMindGUI().setVisible(true);
+                
+        FenetreAccueil accueil = new FenetreAccueil();
+            accueil.setVisible(true);
+                
             }
         });
     }
