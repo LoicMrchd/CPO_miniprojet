@@ -99,7 +99,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="290" y="150" width="410" height="410"/>
+          <AbsoluteConstraints x="290" y="110" width="630" height="560"/>
         </Constraint>
       </Constraints>
 
@@ -533,7 +533,7 @@
       </AccessibilityProperties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="700" y="180" width="170" height="370"/>
+          <AbsoluteConstraints x="930" y="140" width="220" height="520"/>
         </Constraint>
       </Constraints>
 
@@ -604,47 +604,22 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="380" y="610" width="240" height="50"/>
+          <AbsoluteConstraints x="450" y="680" width="310" height="70"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel11">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Bodoni MT Black" size="36" style="3"/>
+          <Font name="Bodoni MT Black" size="36" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="MasterMind"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="650" y="20" width="360" height="110"/>
+          <AbsoluteConstraints x="650" y="10" width="360" height="110"/>
         </Constraint>
       </Constraints>
     </Component>
-    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
-      <AuxValues>
-        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-      </AuxValues>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="920" y="200" width="550" height="260"/>
-        </Constraint>
-      </Constraints>
-
-      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-      <SubComponents>
-        <Component class="javax.swing.JTextArea" name="jTextArea1">
-          <Properties>
-            <Property name="editable" type="boolean" value="false"/>
-            <Property name="columns" type="int" value="20"/>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="13" style="0"/>
-            </Property>
-            <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="R&#xe8;gles du jeu MasterMind :&#xa;1. Objectif : Trouvez la combinaison secr&#xe8;te en un maximum de 10 tentatives.&#xa;2. D&#xe9;roulement :&#xa;   - &#xc0; chaque tentative, choisissez une combinaison de 4 couleurs en cliquant sur les boutons.&#xa;   - Validez votre tentative en cliquant sur le bouton &quot;Valider&quot;.&#xa;3. R&#xe9;sultats :&#xa;   - Pions noirs : Nombre de couleurs bien plac&#xe9;es.&#xa;   - Pions blancs : Nombre de couleurs correctes mais mal plac&#xe9;es.&#xa;4. Conditions de victoire :&#xa;   - Vous gagnez si vous obtenez 4 pions noirs (toutes les couleurs bien plac&#xe9;es).&#xa;   - La partie se termine si toutes les tentatives sont utilis&#xe9;es sans trouver la combinaison.&#xa;&#xa;Bonne chance et amusez-vous bien !"/>
-          </Properties>
-        </Component>
-      </SubComponents>
-    </Container>
   </SubComponents>
 </Form>

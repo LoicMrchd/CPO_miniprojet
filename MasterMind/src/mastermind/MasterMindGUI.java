@@ -121,8 +121,6 @@ public class MasterMindGUI extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jButton41 = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
 
         jMenuItem1.setText("Rouge");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
@@ -547,7 +545,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
 
         jPanel1.add(jPanel11);
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, 410, 410));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 110, 630, 560));
 
         jPanel12.setPreferredSize(new java.awt.Dimension(300, 280));
         jPanel12.setLayout(new java.awt.GridLayout(10, 1));
@@ -582,7 +580,7 @@ public class MasterMindGUI extends javax.swing.JFrame {
         jLabel10.setText("10");
         jPanel12.add(jLabel10);
 
-        getContentPane().add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 180, 170, 370));
+        getContentPane().add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 140, 220, 520));
         jPanel12.getAccessibleContext().setAccessibleName("Tableau des indices");
 
         jButton41.setText("Valider");
@@ -592,20 +590,11 @@ public class MasterMindGUI extends javax.swing.JFrame {
                 jButton41ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton41, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 610, 240, 50));
+        getContentPane().add(jButton41, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 680, 310, 70));
 
-        jLabel11.setFont(new java.awt.Font("Bodoni MT Black", 3, 36)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Bodoni MT Black", 1, 36)); // NOI18N
         jLabel11.setText("MasterMind");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 20, 360, 110));
-
-        jTextArea1.setEditable(false);
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
-        jTextArea1.setRows(5);
-        jTextArea1.setText("Règles du jeu MasterMind :\n1. Objectif : Trouvez la combinaison secrète en un maximum de 10 tentatives.\n2. Déroulement :\n   - À chaque tentative, choisissez une combinaison de 4 couleurs en cliquant sur les boutons.\n   - Validez votre tentative en cliquant sur le bouton \"Valider\".\n3. Résultats :\n   - Pions noirs : Nombre de couleurs bien placées.\n   - Pions blancs : Nombre de couleurs correctes mais mal placées.\n4. Conditions de victoire :\n   - Vous gagnez si vous obtenez 4 pions noirs (toutes les couleurs bien placées).\n   - La partie se termine si toutes les tentatives sont utilisées sans trouver la combinaison.\n\nBonne chance et amusez-vous bien !");
-        jScrollPane1.setViewportView(jTextArea1);
-
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 200, 550, 260));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 10, 360, 110));
 
         getAccessibleContext().setAccessibleName("MasterMind");
 
@@ -1077,7 +1066,5 @@ public class MasterMindGUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JPopupMenu jPopupMenu1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }

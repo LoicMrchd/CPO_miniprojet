@@ -18,31 +18,38 @@ public class FenetreAccueil extends javax.swing.JFrame {
     public FenetreAccueil() {
         
         
-        initComponents();
         setTitle("Mastermind - Accueil");
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     setLayout(new BorderLayout());
-    setSize(500, 300);
+    setSize(600, 400);
 
-    JLabel titre = new JLabel("Mastermind", JLabel.CENTER);
-    titre.setFont(new Font("Arial", Font.BOLD, 24));
+    JLabel titre = new JLabel("MasterMind", JLabel.CENTER);
+    titre.setFont(new Font("Bodoni MT Black", Font.BOLD , 100));
     add(titre, BorderLayout.NORTH);
 
-    JTextArea regles = new JTextArea(
-        "Règles du Mastermind :\n" +
-        "1. Une combinaison secrète de 4 couleurs est générée.\n" +
-        "2. À chaque tentative, choisissez 4 couleurs.\n" +
-        "3. Vous recevrez des indices :\n" +
-        "   - 'Noir' : une couleur bien placée.\n" +
-        "   - 'Blanc' : une couleur correcte mais mal placée.\n" +
-        "4. Trouvez la combinaison en moins de 10 tentatives pour gagner !\n\n" +
-        "Cliquez sur 'Ouvrir' pour commencer à jouer."
-    );
-    regles.setEditable(false);
-    regles.setLineWrap(true);
-    regles.setWrapStyleWord(true);
-    regles.setBackground(getBackground());
-    add(new JScrollPane(regles), BorderLayout.CENTER);
+    String reglesHtml = "<html><div style='text-align: center;'>"
+        + "<b>Bienvenue dans MasterMind !</b><br><br>"
+        + "Le but du jeu est de deviner la combinaison secrète composée de 4 couleurs.<br><br>"
+        + "<b>Couleurs disponibles :</b> Rouge (R), Bleu (B), Vert (G), Jaune (Y),<br>"
+        + "Orange (O), Violet (P).<br><br>"
+        + "<b>Comment jouer :</b><br>"
+        + " - Cliquez sur les boutons de la ligne active pour sélectionner une couleur.<br>"
+        + " - Validez votre combinaison en appuyant sur le bouton <i>\"Valider\"</i>.<br>"
+        + " - Analysez les indices pour ajuster vos tentatives.<br><br>"
+        + "<b>Indices :</b><br>"
+        + " - <b>Noir :</b> Une couleur correcte et bien placée.<br>"
+        + " - <b>Blanc :</b> Une couleur correcte mais mal placée.<br><br>"
+        + "<b>Fin de la partie :</b><br>"
+        + "Vous gagnez si vous trouvez la combinaison en moins de 10 tentatives.<br>"
+        + "Sinon, la partie est perdue.<br><br>"
+        + "<b>Bonne chance et amusez-vous bien !</b>"
+        + "</div></html>";
+
+JLabel lblRegles = new JLabel(reglesHtml, SwingConstants.CENTER);
+            
+        
+        lblRegles.setFont(new Font("Arial", Font.PLAIN, 25));
+        this.getContentPane().add(lblRegles, BorderLayout.CENTER);;
 
     JButton btnOuvrir = new JButton("Ouvrir");
     btnOuvrir.addActionListener(e -> {
