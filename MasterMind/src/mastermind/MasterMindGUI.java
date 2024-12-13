@@ -21,8 +21,11 @@ public class MasterMindGUI extends javax.swing.JFrame {
     
     private JButton boutonActif;
     private int tentativeActuelle = 0;
-    private List<List<JButton>> tableauBoutons = new ArrayList<>();
+    
     private PlateauDeJeu plateau;
+    
+    
+    
     
     
     
@@ -39,6 +42,17 @@ public class MasterMindGUI extends javax.swing.JFrame {
         plateau = new PlateauDeJeu(combinaisonSecrete, 10);
 
         System.out.println("Plateau initialisé : " + (plateau != null));
+        
+        setRowEnabled(jPanel2, true); // Activer la première ligne
+setRowEnabled(jPanel3, false);
+setRowEnabled(jPanel4, false);
+setRowEnabled(jPanel5, false);
+setRowEnabled(jPanel6, false);
+setRowEnabled(jPanel7, false);
+setRowEnabled(jPanel8, false);
+setRowEnabled(jPanel9, false);
+setRowEnabled(jPanel10, false);
+setRowEnabled(jPanel11, false);
     }
 
     /**
@@ -617,6 +631,17 @@ public class MasterMindGUI extends javax.swing.JFrame {
     return couleurs;
 }
     
+    private void setRowEnabled(JPanel rowPanel, boolean enabled) {
+    for (Component comp : rowPanel.getComponents()) {
+        if (comp instanceof JButton) {
+            JButton button = (JButton) comp;
+            button.setEnabled(enabled); // Désactive ou réactive le bouton, mais conserve son apparence et sa couleur
+        }
+    }
+}
+    
+
+    
     
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -950,8 +975,17 @@ public class MasterMindGUI extends javax.swing.JFrame {
         return;
     }
 
+    // Désactiver la ligne actuelle
+    setRowEnabled(panelActif, false);
+
     // Passer à la tentative suivante
     tentativeActuelle++;
+    JPanel nextPanel = (JPanel) jPanel1.getComponent(tentativeActuelle);
+
+    // Activer la ligne suivante
+    if (nextPanel != null) {
+        setRowEnabled(nextPanel, true);
+    }
         
     }//GEN-LAST:event_jButton41ActionPerformed
 
