@@ -48,10 +48,11 @@ public class FenetreAccueil extends javax.swing.JFrame {
 JLabel lblRegles = new JLabel(reglesHtml, SwingConstants.CENTER);
             
         
-        lblRegles.setFont(new Font("Arial", Font.PLAIN, 25));
+        lblRegles.setFont(new Font("Arial", Font.PLAIN, 22));
         this.getContentPane().add(lblRegles, BorderLayout.CENTER);;
 
     JButton btnOuvrir = new JButton("Ouvrir");
+    btnOuvrir.setFont(new Font("Arial", Font.BOLD, 35));
     btnOuvrir.addActionListener(e -> {
         new MasterMindGUI().setVisible(true); // Lance la fenêtre de jeu
         dispose(); // Ferme la fenêtre d'accueil

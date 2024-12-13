@@ -611,13 +611,13 @@
     <Component class="javax.swing.JLabel" name="jLabel11">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Bodoni MT Black" size="36" style="1"/>
+          <Font name="Bodoni MT Black" size="48" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="MasterMind"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="650" y="10" width="360" height="110"/>
+          <AbsoluteConstraints x="620" y="10" width="360" height="110"/>
         </Constraint>
       </Constraints>
     </Component>

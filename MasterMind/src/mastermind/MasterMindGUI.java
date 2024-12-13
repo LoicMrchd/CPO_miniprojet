@@ -592,9 +592,9 @@ public class MasterMindGUI extends javax.swing.JFrame {
         });
         getContentPane().add(jButton41, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 680, 310, 70));
 
-        jLabel11.setFont(new java.awt.Font("Bodoni MT Black", 1, 36)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Bodoni MT Black", 1, 48)); // NOI18N
         jLabel11.setText("MasterMind");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 10, 360, 110));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 10, 360, 110));
 
         getAccessibleContext().setAccessibleName("MasterMind");
 
