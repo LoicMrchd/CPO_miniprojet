@@ -631,14 +631,67 @@ setRowEnabled(jPanel11, false);
     return couleurs;
 }
     
+    
+    
     private void setRowEnabled(JPanel rowPanel, boolean enabled) {
     for (Component comp : rowPanel.getComponents()) {
         if (comp instanceof JButton) {
             JButton button = (JButton) comp;
-            button.setEnabled(enabled); // Désactive ou réactive le bouton, mais conserve son apparence et sa couleur
+
+            if (!enabled) {
+                // Récupérer la couleur actuelle du bouton
+                Color boutonCouleur = button.getBackground();
+
+                // Désactiver l'interaction
+                button.setEnabled(false); // Désactive le bouton
+                button.setOpaque(true); // Rend visible la couleur de fond
+                button.setContentAreaFilled(true); // Assure que la couleur est affichée
+                button.setBorderPainted(false); // Supprime les bordures
+                button.setFocusPainted(false); // Supprime l'effet de focus
+
+                // Fixer explicitement la couleur de fond pour qu'elle ne change pas
+                button.setBackground(boutonCouleur);
+
+                // Supprimer le texte du bouton (lettre de couleur)
+                button.setText(""); 
+
+                // Optionnel : Mettre la couleur de texte à la couleur de fond pour s'assurer que la lettre soit bien invisible
+                button.setForeground(boutonCouleur);
+            } else {
+                // Réactiver le bouton avec ses paramètres par défaut
+                button.setEnabled(true);
+                button.setContentAreaFilled(true);
+                button.setBorderPainted(true);
+                button.setFocusPainted(true);
+                button.setForeground(Color.BLACK); // Texte visible en noir
+                button.setText(" "); // Ajout d'un espace si nécessaire (pour éviter une mise à jour du texte)
+            }
         }
     }
 }
+    
+  private void convertirBoutonsEnLabels(JPanel rowPanel) {
+    for (int i = 0; i < rowPanel.getComponentCount(); i++) {
+        Component comp = rowPanel.getComponent(i);
+        if (comp instanceof JButton) {
+            JButton button = (JButton) comp;
+
+            // Créer une JLabel avec la même couleur que le bouton
+            JLabel label = new JLabel();
+            label.setOpaque(true);
+            label.setBackground(button.getBackground());
+            label.setPreferredSize(button.getPreferredSize());
+            
+            // Remplacer le bouton par l'étiquette
+            rowPanel.remove(i); // Supprimer le bouton
+            rowPanel.add(label, i); // Ajouter l'étiquette au même endroit
+        }
+    }
+
+    // Rafraîchir le panel pour afficher les modifications
+    rowPanel.revalidate();
+    rowPanel.repaint();
+}  
     
 
     
@@ -665,37 +718,37 @@ setRowEnabled(jPanel11, false);
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
         boutonActif.setBackground(Color.RED); // Change la couleur d'arrière-plan
-        boutonActif.setText("R");
+        
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
         boutonActif.setBackground(Color.GREEN); // Change la couleur d'arrière-plan
-        boutonActif.setText("G");
+        
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         // TODO add your handling code here:
         boutonActif.setBackground(Color.BLUE); // Change la couleur d'arrière-plan
-        boutonActif.setText("B");
+        
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         // TODO add your handling code here:
         boutonActif.setBackground(Color.YELLOW); // Change la couleur d'arrière-plan
-        boutonActif.setText("Y");
+        
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         // TODO add your handling code here:
         boutonActif.setBackground(Color.ORANGE); // Change la couleur d'arrière-plan
-        boutonActif.setText("O");
+        
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
         // TODO add your handling code here:
         boutonActif.setBackground(Color.MAGENTA); // Change la couleur d'arrière-plan
-        boutonActif.setText("P");
+      
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jButton2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MousePressed
@@ -937,32 +990,29 @@ setRowEnabled(jPanel11, false);
         // Récupérer le panel actif
     // Vérifier si le plateau est initialisé
     if (plateau == null) {
-        // Si 'plateau' est null, l'initialiser ici
         ArrayList<Character> couleursDisponibles = new ArrayList<>(List.of('R', 'B', 'G', 'Y', 'O', 'P'));
-        Combinaison combinaisonSecrete = Combinaison.genererAleatoire(4, couleursDisponibles);  // Générer une combinaison secrète aléatoire
-        plateau = new PlateauDeJeu(combinaisonSecrete, 10);  // Initialiser le plateau avec 10 tentatives disponibles
+        Combinaison combinaisonSecrete = Combinaison.genererAleatoire(4, couleursDisponibles); 
+        plateau = new PlateauDeJeu(combinaisonSecrete, 10);
     }
 
     // Récupérer le panel actif
     JPanel panelActif = (JPanel) jPanel1.getComponent(tentativeActuelle);
 
-    // Obtenir les couleurs sélectionnées dans le panel
+    // Obtenir les couleurs sélectionnées
     List<Character> combinaisonJoueur = obtenirCouleursLigne(panelActif);
     if (combinaisonJoueur == null) {
-        return; // Si la combinaison est incomplète, ne pas continuer.
+        return; // Si la combinaison est incomplète, ne pas continuer
     }
 
-    // Convertir la combinaison en format Pion[]
+    // Convertir en Pion[] pour vérification
     Pion[] pionsTentative = new Pion[combinaisonJoueur.size()];
     for (int i = 0; i < combinaisonJoueur.size(); i++) {
-        pionsTentative[i] = new Pion(combinaisonJoueur.get(i));  // Créer les pions à partir des couleurs
+        pionsTentative[i] = new Pion(combinaisonJoueur.get(i));
     }
     Combinaison tentative = new Combinaison(pionsTentative);
 
-    // Vérifier la tentative avec la combinaison secrète
+    // Vérifier la tentative
     int[] resultat = plateau.getCombinaisonSecrete().comparer(tentative);
-
-    // Afficher les indices dans le label correspondant
     JLabel labelIndice = (JLabel) jPanel12.getComponent(tentativeActuelle);
     labelIndice.setText(resultat[0] + " noirs, " + resultat[1] + " blancs");
 
@@ -970,23 +1020,22 @@ setRowEnabled(jPanel11, false);
     if (resultat[0] == 4) {
         JOptionPane.showMessageDialog(this, "Félicitations ! Vous avez trouvé la combinaison secrète !");
         return;
-    } else if (tentativeActuelle == 9) { // Dernière tentative (jPanel11)
+    } else if (tentativeActuelle == 9) {
         JOptionPane.showMessageDialog(this, "Partie terminée. Vous avez utilisé toutes vos tentatives.");
         return;
     }
 
-    // Désactiver la ligne actuelle
+    // Désactiver la ligne actuelle et la convertir en labels
     setRowEnabled(panelActif, false);
+    convertirBoutonsEnLabels(panelActif);
 
-    // Passer à la tentative suivante
+    // Passer à la ligne suivante
     tentativeActuelle++;
     JPanel nextPanel = (JPanel) jPanel1.getComponent(tentativeActuelle);
-
-    // Activer la ligne suivante
     if (nextPanel != null) {
         setRowEnabled(nextPanel, true);
-    }
-        
+    
+    }   
     }//GEN-LAST:event_jButton41ActionPerformed
 
     /**
