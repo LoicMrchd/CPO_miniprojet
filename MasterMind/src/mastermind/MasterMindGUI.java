@@ -635,6 +635,8 @@ setRowEnabled(jPanel11, false);
     
     
     
+    
+    
     private void setRowEnabled(JPanel rowPanel, boolean enabled) {
     for (Component comp : rowPanel.getComponents()) {
         if (comp instanceof JButton) {
@@ -694,6 +696,9 @@ setRowEnabled(jPanel11, false);
     rowPanel.revalidate();
     rowPanel.repaint();
 }  
+  
+ 
+
     
 
     
@@ -1036,10 +1041,12 @@ setRowEnabled(jPanel11, false);
     if (resultat[0] == 4) {
         JOptionPane.showMessageDialog(this, "Félicitations ! Vous avez trouvé la combinaison secrète !\n"
                 + "La combinaison était : " + combinaisonSecreteStr);
+        System.exit(0); // Quitter l'application
         return;
     } else if (tentativeActuelle == 9) { // Dernière tentative (jPanel11)
         JOptionPane.showMessageDialog(this, "Partie terminée. Vous avez utilisé toutes vos tentatives.\n"
                 + "La combinaison secrète était : " + combinaisonSecreteStr);
+        System.exit(0); // Quitter l'application
         return;
     }
 
@@ -1048,6 +1055,7 @@ setRowEnabled(jPanel11, false);
 
     // Passer à la tentative suivante
     tentativeActuelle++;
+    
     JPanel nextPanel = (JPanel) jPanel1.getComponent(tentativeActuelle);
 
     // Activer la ligne suivante
