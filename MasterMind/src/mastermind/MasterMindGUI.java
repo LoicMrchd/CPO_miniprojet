@@ -30,6 +30,8 @@ public class MasterMindGUI extends javax.swing.JFrame {
     
     
     
+    
+    
 
     /**
      * Creates new form MasterMindGUI
@@ -997,50 +999,60 @@ setRowEnabled(jPanel11, false);
     // Vérifier si le plateau est initialisé
     if (plateau == null) {
         ArrayList<Character> couleursDisponibles = new ArrayList<>(List.of('R', 'B', 'G', 'Y', 'O', 'P'));
-        Combinaison combinaisonSecrete = Combinaison.genererAleatoire(4, couleursDisponibles); 
+        Combinaison combinaisonSecrete = Combinaison.genererAleatoire(4, couleursDisponibles);
         plateau = new PlateauDeJeu(combinaisonSecrete, 10);
     }
 
     // Récupérer le panel actif
     JPanel panelActif = (JPanel) jPanel1.getComponent(tentativeActuelle);
 
-    // Obtenir les couleurs sélectionnées
+    // Obtenir les couleurs sélectionnées dans le panel
     List<Character> combinaisonJoueur = obtenirCouleursLigne(panelActif);
     if (combinaisonJoueur == null) {
-        return; // Si la combinaison est incomplète, ne pas continuer
+        return; // Si la combinaison est incomplète, ne pas continuer.
     }
 
-    // Convertir en Pion[] pour vérification
+    // Convertir la combinaison en format Pion[]
     Pion[] pionsTentative = new Pion[combinaisonJoueur.size()];
     for (int i = 0; i < combinaisonJoueur.size(); i++) {
         pionsTentative[i] = new Pion(combinaisonJoueur.get(i));
     }
     Combinaison tentative = new Combinaison(pionsTentative);
 
-    // Vérifier la tentative
+    // Vérifier la tentative avec la combinaison secrète
     int[] resultat = plateau.getCombinaisonSecrete().comparer(tentative);
+
+    // Afficher les indices dans le label correspondant
     JLabel labelIndice = (JLabel) jPanel12.getComponent(tentativeActuelle);
     labelIndice.setText(resultat[0] + " noirs, " + resultat[1] + " blancs");
 
+    // Convertir les boutons de la ligne actuelle en labels pour afficher les couleurs
+    convertirBoutonsEnLabels(panelActif);
+
+    // Obtenir la combinaison secrète sous forme de texte
+    String combinaisonSecreteStr = plateau.getCombinaisonSecrete().toString();
+
     // Vérifier si la partie est gagnée ou perdue
     if (resultat[0] == 4) {
-        JOptionPane.showMessageDialog(this, "Félicitations ! Vous avez trouvé la combinaison secrète !");
+        JOptionPane.showMessageDialog(this, "Félicitations ! Vous avez trouvé la combinaison secrète !\n"
+                + "La combinaison était : " + combinaisonSecreteStr);
         return;
-    } else if (tentativeActuelle == 9) {
-        JOptionPane.showMessageDialog(this, "Partie terminée. Vous avez utilisé toutes vos tentatives.");
+    } else if (tentativeActuelle == 9) { // Dernière tentative (jPanel11)
+        JOptionPane.showMessageDialog(this, "Partie terminée. Vous avez utilisé toutes vos tentatives.\n"
+                + "La combinaison secrète était : " + combinaisonSecreteStr);
         return;
     }
 
-    // Désactiver la ligne actuelle et la convertir en labels
+    // Désactiver la ligne actuelle
     setRowEnabled(panelActif, false);
-    convertirBoutonsEnLabels(panelActif);
 
-    // Passer à la ligne suivante
+    // Passer à la tentative suivante
     tentativeActuelle++;
     JPanel nextPanel = (JPanel) jPanel1.getComponent(tentativeActuelle);
+
+    // Activer la ligne suivante
     if (nextPanel != null) {
         setRowEnabled(nextPanel, true);
-    
     }   
     }//GEN-LAST:event_jButton41ActionPerformed
 
