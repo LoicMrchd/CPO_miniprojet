@@ -718,36 +718,42 @@ setRowEnabled(jPanel11, false);
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
         boutonActif.setBackground(Color.RED); // Change la couleur d'arrière-plan
+        boutonActif.setForeground(Color.RED);
         boutonActif.setText("R");
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
-        boutonActif.setBackground(Color.GREEN); // Change la couleur d'arrière-plan
+        boutonActif.setBackground(Color.GREEN);// Change la couleur d'arrière-plan
+        boutonActif.setForeground(Color.GREEN);
         boutonActif.setText("G");
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         // TODO add your handling code here:
         boutonActif.setBackground(Color.BLUE); // Change la couleur d'arrière-plan
+        boutonActif.setForeground(Color.BLUE);
         boutonActif.setText("B");
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         // TODO add your handling code here:
         boutonActif.setBackground(Color.YELLOW); // Change la couleur d'arrière-plan
+        boutonActif.setForeground(Color.YELLOW);
         boutonActif.setText("Y");
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         // TODO add your handling code here:
         boutonActif.setBackground(Color.ORANGE); // Change la couleur d'arrière-plan
+        boutonActif.setForeground(Color.ORANGE);
         boutonActif.setText("O");
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
         // TODO add your handling code here:
-        boutonActif.setBackground(Color.MAGENTA); // Change la couleur d'arrière-plan
+        boutonActif.setBackground(Color.MAGENTA);// Change la couleur d'arrière-plan
+        boutonActif.setForeground(Color.MAGENTA);
       boutonActif.setText("M");
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
